@@ -25,9 +25,12 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  Fixi Common Files custom private Pod to share all common source files as modules for both apps: Citizen and Handler to avoid code duplications
+  Contains:
+  - Analytics
                    DESC
 
-  s.homepage     = "https://decos.visualstudio.com/DefaultCollection/Fixi/_git/FixiCommoniOS"
+  # s.homepage     = "https://decos.visualstudio.com/DefaultCollection/Fixi/_git/FixiCommoniOS"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +42,7 @@ Pod::Spec.new do |s|
   #
 
   s.license      = "Private"
-  s.license      = { :type => "Private", :file => "FILE_LICENSE" }
+  s.license      = { :type => "Private", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +82,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://decos.visualstudio.com/DefaultCollection/Fixi/_git/FixiCommoniOS", :tag => "#{s.version}" }
+#  s.source       = { :git => "https://decos.visualstudio.com/DefaultCollection/Fixi/_git/FixiCommoniOS", :commit => "7e9e8ef99304af2f672437d133bd85fa09552665" }
+  s.source       = { :git => "https://github.com/adamLo/FixiCommon.git", :commit => "7e9e8ef99304af2f672437d133bd85fa09552665" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +94,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "Classes/**/*"
+  #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -132,6 +136,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "Crashlytics", "~> 1.0"
+  #s.dependency "Fabric"
 
 end
