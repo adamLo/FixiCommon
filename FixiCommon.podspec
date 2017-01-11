@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'FixiCommon'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of FixiCommon.'
+  s.summary          = 'Common Fixi source'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,20 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Fixi Common Files custom private Pod to share all common source files as modules for both apps: Citizen and Handler to avoid code duplications
+Contains:
+- Analytics Proxy
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/FixiCommon'
+  s.homepage         = "http://decos.com"
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Adam Lovastyik' => 'adam@lovastyik.hu' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/FixiCommon.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Adam Lovastyik' => 'a.lovastyik@decos.com' }
+#s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/FixiCommon.git', :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/adamLo/FixiCommon.git", :commit => "a74ec388906826be0f2bbfa717128cd784d8d6a6" }
+  s.social_media_url = 'https://twitter.com/nazabiker'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '8.2'
 
   s.source_files = 'FixiCommon/Classes/**/*'
   
@@ -37,6 +40,9 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'Foundation'
+  s.dependency 'Fabric'
+  s.dependency 'Crashlytics'
+
+  s.requires_arc = true
 end
