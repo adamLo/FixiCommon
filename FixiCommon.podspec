@@ -25,7 +25,7 @@ Contains:
 
   s.homepage         = "http://decos.com"
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'Private', :file => 'LICENSE' }
   s.author           = { 'Adam Lovastyik' => 'a.lovastyik@decos.com' }
 #s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/FixiCommon.git', :tag => s.version.to_s }
   s.source       = { :git => "https://github.com/adamLo/FixiCommon.git", :commit => "a74ec388906826be0f2bbfa717128cd784d8d6a6" }
